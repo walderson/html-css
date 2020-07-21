@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Listagem de Produtos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        header {
+            align-items: center;
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        nav {
+            margin-left: 30px;
+        }
+
+        .produto-cards {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            margin-bottom: 30px;
+        }
+
+        /* Inserir os estilos extras aqui */
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav a {
+            color: black;
+            font-weight: bold;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb li {
+            padding: 10px;
+        }
+
+        .breadcrumb li::after {
+            content: '/';
+            margin-left: 20px;
+        }
+
+        .breadcrumb li:last-child::after {
+            content: '';
+        }
+
+        .breadcrumb a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            margin: 30px 0;
+            padding-left: 10px;
+            width: 50%;
+        }
+
+        .intro h1 {
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            line-height: 1.5;
+        }
+
+        .produto-card {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 15px
+        }
+
+        .produto-card img {
+            width: 100%;
+        }
+
+        .produto-card h2 {
+            margin: 30px 0 15px;
+        }
+
+        .produto-card a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .produto-card p {
+            line-height: 1.5;
+        }
+
+        .preco-original {
+            color: grey;
+            text-transform: uppercase;
+        }
+
+        .preco-atual span {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .desconto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://dummyimage.com/200x100/000/fff&text=Logo" alt="Logo">
+        <!-- Inserir a navegação aqui -->
+        <nav>
+            <ul>
+                <li><a href="">Alugar vídeos</a></li>
+                <li><a href="">Comprar vídeos</a></li>
+                <li><a href="">DVDs usados</a></li>
+                <li><a href="">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <!-- Inserir o breadcrumb aqui -->
+        <ol class="breadcrumb">
+            <li><a href="">Início</a></li>
+            <li><a href="">DVDs usados</a></li>
+            <li>Até R$ 10,00</li>
+        </ol>
+    </section>
+    <!-- Inserir a seção de apresentação aqui -->
+    <section class="intro">
+        <h1>Vídeos até R$ 10,00</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+    <section class="produto-cards">
+        <!-- Inserir os cards dos produtos aqui -->
+        <div class="produto-card">
+            <img src="https://dummyimage.com/300x300/2882f7/ffffff&text=Produto+1" alt="Imagem do produto 1">
+            <h2><a href="">Título do produto 1</a></h2>
+            <p class="preco-original">Preço original: R$ 18,99</p>
+            <p class="preco-atual">Preço atual: <span>R$ 9,99</span></p>
+            <p class="desconto">Você economiza: R$ 9,00</p>
+        </div>
+        <div class="produto-card">
+            <img src="https://dummyimage.com/300x300/2882f7/ffffff&text=Produto+2" alt="Imagem do produto 2">
+            <h2><a href="">Título do produto 2</a></h2>
+            <p class="preco-original">Preço original: R$ 18,99</p>
+            <p class="preco-atual">Preço atual: <span>R$ 9,99</span></p>
+            <p class="desconto">Você economiza: R$ 9,00</p>
+        </div>
+        <div class="produto-card">
+            <img src="https://dummyimage.com/300x300/2882f7/ffffff&text=Produto+3" alt="Imagem do produto 3">
+            <h2><a href="">Título do produto 3</a></h2>
+            <p class="preco-original">Preço original: R$ 18,99</p>
+            <p class="preco-atual">Preço atual: <span>R$ 9,99</span></p>
+            <p class="desconto">Você economiza: R$ 9,00</p>
+        </div>
+        <div class="produto-card">
+            <img src="https://dummyimage.com/300x300/2882f7/ffffff&text=Produto+4" alt="Imagem do produto 4">
+            <h2><a href="">Título do produto 4</a></h2>
+            <p class="preco-original">Preço original: R$ 18,99</p>
+            <p class="preco-atual">Preço atual: <span>R$ 9,99</span></p>
+            <p class="desconto">Você economiza: R$ 9,00</p>
+        </div>
+    </section>
+</body>
+</html>
