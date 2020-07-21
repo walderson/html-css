@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Card do produto</title>
+    <style>
+        .produto-card {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 15px
+        }
+
+        .produto-card img {
+            width: 100%;
+        }
+
+        .produto-card h2 {
+            margin: 30px 0 15px;
+        }
+
+        .produto-card a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .produto-card p {
+            line-height: 1.5;
+        }
+
+        .preco-original {
+            color: grey;
+            text-transform: uppercase;
+        }
+
+        .preco-atual span {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .desconto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="produto-card">
+        <img src="https://dummyimage.com/300x300/2882f7/ffffff&text=Produto+1" alt="Imagem do produto 1">
+        <h2><a href="">Título do produto 1</a></h2>
+        <p class="preco-original">Preço original: R$ 18,99</p>
+        <p class="preco-atual">Preço atual: <span>R$ 9,99</span></p>
+        <p class="desconto">Você economiza: R$ 9,00</p>
+    </div>
+</body>
+</html>
