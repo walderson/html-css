@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Página inicial da loja de vídeos</title>
+    <style>
+        header,
+        nav,
+        section,
+        footer {
+            background: #659494;
+            border-radius: 5px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        header::before,
+        nav::before,
+        footer::before {
+            content: '<'
+        }
+
+        header::after,
+        nav::after,
+        footer::after {
+            content: '>'
+        }
+
+        header,
+        nav,
+        section,
+        footer {
+            border: 1px solid grey;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        section div {
+            border: 2px solid white;
+            padding: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>
+        <div contenteditable="true">Produto 1</div>
+        <div contenteditable="true">Produto 2</div>
+        <div contenteditable="true">Produto 3</div>
+        <div contenteditable="true">Produto 4</div>
+        <div contenteditable="true">Produto 5</div>
+        <div contenteditable="true">Produto 6</div>
+        <div contenteditable="true">Produto 7</div>
+        <div contenteditable="true">Produto 8</div>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>
