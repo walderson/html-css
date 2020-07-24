@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Formulário de busca de imóveis à venda</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        fieldset {
+            border: 0;
+            padding: 0;
+            width: 900px;
+        }
+
+        fieldset > div {
+            margin-bottom: 24px;
+        }
+
+        .row, .item {
+            display: flex;
+        }
+
+        .item {
+            margin-bottom: 15px;
+            margin-right: 30px;
+        }
+
+        .row > div {
+            flex-basis: 50%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            margin-right: 15px;
+            line-height: 35px;
+            width: 200px;
+        }
+
+        select, input {
+            border: 2px solid grey;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        select {
+            background-color: transparent;
+            box-shadow: none;
+            color: #666;
+            -webkit-appearance: none;
+            width: 100%;
+        }
+
+        .select-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .select-wrapper::after {
+            content: '< >';
+            color: #666;
+            font-size: 18px;
+            top: 8px;
+            right: 0;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: -1;
+        }
+
+        .checkbox {
+            margin-left: 122px;
+            margin-right: 10px;
+            width: auto;
+        }
+
+        .checkbox + label {
+            width: auto;
+            line-height: 20px;
+        }
+
+        button {
+            background-color: green;
+            border: 0;
+            color: white;
+            float: right;
+            font-weight: bold;
+            margin-right: 30px;
+            padding: 10px;
+            text-transform: uppercase;
+            width: 224px;
+        }
+    </style>
+    <link rel="stylesheet" href="../estilos/dark-theme.css">
+</head>
+<body>
+    <form action="URL para enviar os dados do formulário" method="post">
+        <fieldset>
+            <h2>Imóveis à venda em Springfield</h2>
+            <div class="row">
+                <!-- Primeira coluna -->
+                <div>
+                    <div class="item">
+                        <label for="area">Área da busca:</label>
+                        <div class="select-wrapper">
+                            <select name="area" id="area">
+                                <option value="local">Área local</option>
+                                <option value="5">5 quilômetros</option>
+                                <option value="10">10 quilômetros</option>
+                                <option value="20">20 quilômetros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="preco">Faixa de preço:</label>
+                        <div class="select-wrapper">
+                            <select name="preco" id="preco">
+                                <option value="todos">Todos</option>
+                                <option value="100">Até 100 mil</option>
+                                <option value="250">Até 250 mil</option>
+                                <option value="500">Até 500 mil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="quartos">Quartos:</label>
+                        <div class="select-wrapper">
+                            <select name="quartos" id="quartos">
+                                <option value="todos">Todos</option>
+                                <option value="1">1 quarto</option>
+                                <option value="2">2 quartos</option>
+                                <option value="3">3 quartos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segunda coluna -->
+                <div>
+                    <div class="item">
+                        <label for="tipo">Tipo do imóvel:</label>
+                        <div class="select-wrapper">
+                            <select name="tipo" id="tipo">
+                                <option value="todos">Todos</option>
+                                <option value="apto">Apartamento</option>
+                                <option value="casa">Casa</option>
+                                <option value="terreno">Terreno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="data">Data do cadastro:</label>
+                        <div class="select-wrapper">
+                            <select name="data" id="data">
+                                <option value="todas">Todas</option>
+                                <option value="24h">24 horas</option>
+                                <option value="1s">1 semana</option>
+                                <option value="1m">1 mês</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" class="checkbox" name="vendido" id="vendido" value="sim">
+                        <label for="vendido">Incluir imóveis vendidos</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Encontrar imóveis</button>
+        </fieldset>
+    </form>
+</body>
+</html>
