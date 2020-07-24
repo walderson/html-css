@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Validação de formulário com estilo</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            margin-bottom: 30px;
+        }
+
+        fieldset {
+            border: 0;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input, textarea {
+            border: 0;
+            border-bottom: 1px solid grey;
+            padding: 10px 0;
+            width: 200px;
+        }
+
+        select {
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid grey;
+            box-shadow: none;
+            color: #666;
+            -webkit-appearance: none;
+            padding: 10px 0;
+            width: 200px;
+        }
+
+        .select-wrapper {
+            position: relative;
+            width: 200px;
+        }
+
+        .select-wrapper::after {
+            content: '<>';
+            color: #666;
+            font-size: 14px;
+            top: 8px;
+            right: 0;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: -1;
+        }
+
+        button {
+            background: #999;
+            border: 0;
+            color: white;
+            font-size: 12px;
+            height: 50px;
+            width: 200px;
+            text-transform: uppercase;
+        }
+
+        input:valid, textarea:valid {
+            border-bottom-color: green;
+        }
+
+        input:invalid, textarea:invalid {
+            border-bottom-color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="../estilos/dark-theme-hsl.css">
+</head>
+<body>
+    <form action="url_para_enviar_dados_do_formulario" method="post">
+        <fieldset>
+            <div>
+                <label for="nome">Nome:</label><br>
+                <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+            </div>
+            <div>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu sobrenome" required>
+            </div>
+            <div>
+                <label for="pais">País</label><br>
+                <div class="select-wrapper">
+                    <select name="pais" id="pais">
+                        <option value="angola">Angola</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="timor-leste">Timor-Leste</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea name="mensagem" id="mensagem" cols="20" rows="5" placeholder="Sua mensagem"
+                    required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
